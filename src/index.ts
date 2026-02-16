@@ -42,7 +42,7 @@ const logOnePokemon = (pokemon: pokemon) => {
   console.log(pokemon.stats);
 }
 
-logOnePokemon(pokemons[0]);
+logOnePokemon(pokemons[0]!);
 
 // const logAllPokemons = (pokemons: pokemon[]) => {
 //   pokemons.forEach(pokemon => logOnePokemon(pokemon));
