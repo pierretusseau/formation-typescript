@@ -1,33 +1,7 @@
-import type { Pokemon } from "./pokemon.js"
-
-const pokemons: Pokemon[] = [
-  {
-    name: "Pikachu",
-    type: "Electric",
-    level: 25,
-    stats: { hp: 35, attack: 55, defense: 40, speed: 90 },
-  },
-  {
-    name: "Dracaufeu",
-    type: "Fire",
-    level: 36,
-    stats: { hp: 78, attack: 84, defense: 78, speed: 100 },
-  },
-  {
-    name: "Tortank",
-    type: "Water",
-    level: 36,
-    stats: { hp: 79, attack: 83, defense: 100, speed: 78 },
-  },
-  {
-    name: "Florizarre",
-    type: "Grass",
-    level: 32,
-    stats: { hp: 80, attack: 82, defense: 83, speed: 80 },
-  },
-]
+import { pokemons } from "./pokemon.js"
+import type { PokemonName } from "./pokemon.js"
 
 export const getAllPokemons = () => pokemons
 
-export const findPokemonByName = (name: string) =>
+export const findPokemonByName = (name: PokemonName) =>
   pokemons.find((p) => p.name === name)

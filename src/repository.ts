@@ -1,11 +1,11 @@
-import type { OwnedPokemon } from "./pokemon.js"
+import type { OwnedPokemon, PokemonName } from "./pokemon.js"
 
-const db = new Map<string, OwnedPokemon>()
+const db = new Map<PokemonName, OwnedPokemon>()
 
 export const addPokemon = (pokemon: OwnedPokemon) => {
   db.set(pokemon.name, pokemon)
 }
 
-export const getPokemonByName = (name: string) => db.get(name)
+export const getPokemonByName = (name: PokemonName) => db.get(name)
 
 export const getAllPokemons = () => [...db.values()]
